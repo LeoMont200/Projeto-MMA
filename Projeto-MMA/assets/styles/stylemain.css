@@ -1,0 +1,175 @@
+body{
+    height: 100vh;
+    animation: fadeIn 1s ease forwards;
+    margin:0
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.backimage {
+    
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.63) 0%, rgba(0, 0, 0, 0.41) 100%), url('../images/ring.png') no-repeat center center/cover;
+    position: relative;
+    height: 100vh;
+
+}
+
+
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 3vh;
+    width: 95%;
+    height: 50px;
+    color: white;
+    padding: 15px;
+    padding-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu.scrolled {
+    background-color: red;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.438);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    margin-top: 1vh;
+    border-radius: 50px;
+
+}
+
+.btn_menu {
+    align-self: center;
+    color: aliceblue;
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    font-size: medium;
+}
+
+.btn_menu {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+}
+
+.menu img {
+    width: 16%;
+    height: 90px;
+    margin-top: -12vh;
+}
+
+.btn_menu ::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #e9e9e9;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+
+.btn_menu:hover::after {
+    width: 100%;
+}
+
+.btn_menu:active {
+    transform: scale(0.98);
+
+}
+
+.btn_login {
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: rgb(0, 0, 179);
+    width: 110px;
+    display: flex;
+    margin-top: 1vh;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: large;
+    margin-right: 30px;
+    display: flex;
+
+}
+.btn_cadastro {
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: rgb(190, 0, 0);
+    width: 110px;
+    display: flex;
+    margin-top: 1vh;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: large;
+    margin-right: 30px;
+    display: flex;
+
+}
+
+.btn_cadastro a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn_cadastro:hover {
+    background-color: rgb(100, 0, 0);
+    border-color: lightblue;
+    cursor: pointer;
+}
+
+.btn_cadastro:active {
+    background-color: rgb(100, 0, 0);
+    /* Ainda mais escuro ao clicar */
+    transform: scale(0.97);
+    /* Leve afundada ao clicar */
+}
+.btn_login a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn_login:hover {
+    background-color: darkblue;
+    border-color: lightblue;
+    cursor: pointer;
+}
+
+.btn_login:active {
+    background-color: navy;
+    /* Ainda mais escuro ao clicar */
+    transform: scale(0.97);
+    /* Leve afundada ao clicar */
+}
